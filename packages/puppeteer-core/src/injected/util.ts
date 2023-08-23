@@ -27,7 +27,7 @@ export const checkVisibility = (
 
 function isBoundingBoxEmpty(element: Element): boolean {
   const rect = element.getBoundingClientRect();
-  return !!(rect.width || rect.height || rect.top || rect.bottom);
+  return !(rect.width || rect.height || rect.top || rect.bottom);
 }
 
 const hasShadowRoot = (node: Node): node is Node & {shadowRoot: ShadowRoot} => {
